@@ -6,24 +6,28 @@ class App extends Component {
         super(props)
 
         this.state = {
-            txt: "dumy text"
+            task: "dumy text",
+            tasks: []
         }
-        this.styles = {
 
-            input:{
-                border:'1px solid red'
-            }
-        }
     }
 
         changeTxt (e) {
-            console.log(e.target.value)
+
              this.setState ({
-                 txt: e.target.value
+                 task: e.target.value
              })
         }
 
+    addTask (){
+        let tasks = this.state.tasks
+        tasks.push(this.state.task)
+        this.setState({
+            tasks
+        })
+        console.log(this.state.tasks)
 
+    }
 
 
 
@@ -32,11 +36,11 @@ class App extends Component {
         return (
             <div className="App" id="App">
 
-                <h1>{this.state.txt}</h1>
 
-                <input style={this.styles.input} type="text" onChange={(e)  => this.changeTxt(e)}/>
 
-               <button onClick={() => this.changeTxt()}>
+                <input  type="text" onChange={(e)  => this.changeTxt(e)}/>
+
+               <button onClick={() => this.addTask()}>
                   Add task
 
                </button>
