@@ -1,11 +1,21 @@
 import React, { Component } from 'react'
 
 class App extends Component {
+    constructor (props){
+        super(props)
+
+        this.state = {
+            msg: "This is my first component"
+        }
+    }
+
+
+
     render () {
         return (
             <div>
-                <h1>Firts Componenent</h1>
-                <p> This is my first component in React</p>
+                <h1>{this.state.msg}</h1>
+
 
             </div>
         )
