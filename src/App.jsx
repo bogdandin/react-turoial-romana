@@ -10,12 +10,12 @@ class App extends Component {
         }
     }
 
-        changeTxt () {
+        changeTxt (e) {
+            console.log(e.target.value)
              this.setState ({
-                 txt: 'this is new text '
+                 txt: e.target.value
              })
-
-            }
+        }
 
 
 
@@ -27,7 +27,9 @@ class App extends Component {
             <div className="App" id="App">
 
                 <h1>{this.state.txt}</h1>
-                <h1>{this.props.message}</h1>
+
+                <input type="text" onChange={(e)  => this.changeTxt(e)}/>
+
                <button onClick={() => this.changeTxt()}>
                    Change text
 
