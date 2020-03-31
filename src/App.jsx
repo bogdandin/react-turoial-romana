@@ -7,16 +7,17 @@ class App extends Component {
         this.state = {
             txt: "dumy text"
         }
+    }
 
-        setTimeout(() => {
+        changeTxt () {
              this.setState ({
                  txt: 'this is new text '
              })
 
-            },1000 )
+            }
 
 
-    }
+
 
 
 
@@ -26,7 +27,10 @@ class App extends Component {
 
                 <h1>{this.state.txt}</h1>
                 <h1>{this.props.message}</h1>
-                <p>Props de la parinte si state din constructor /  Both props and state changes trigger a render update.</p>
+               <button onClick={() => this.changeTxt()}>
+                   Change text
+
+               </button>
 
 
 
