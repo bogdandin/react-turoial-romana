@@ -25,11 +25,27 @@ class App extends Component {
         this.setState({
             tasks
         })
-        console.log(this.state.tasks)
-
     }
 
+    listTasks() {
+        let tasks = this.state.tasks
+        return (
+                <ul>
+                    {
 
+                      tasks.map((val,index) => {
+                        return (
+                            <li key={index}>
+                                { val }
+                            </li>
+                        )
+
+                      })
+                    }
+                </ul>
+        )
+
+    }
 
 
     render () {
@@ -44,6 +60,8 @@ class App extends Component {
                   Add task
 
                </button>
+
+               {this.listTasks()}
 
 
 
