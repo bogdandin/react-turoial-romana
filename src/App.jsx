@@ -9,7 +9,9 @@ class App extends Component {
         }
 
         setTimeout(() => {
-             this.state.txt = 'This is ne text and not work like this...'
+             this.setState ({
+                 txt: 'this is new text '
+             })
 
             },1000 )
 
