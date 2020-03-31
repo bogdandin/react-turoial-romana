@@ -6,6 +6,7 @@ class App extends Component {
 
         this.state = {
             msg: "This is my first component"
+            txt: "This is my dumy text"
         }
     }
 
@@ -15,6 +16,7 @@ class App extends Component {
         return (
             <div>
                 <h1>{this.state.msg}</h1>
+                <p>{this.state.txt}</p>
 
 
             </div>
