@@ -7,6 +7,13 @@ class App extends Component {
         this.state = {
             txt: "dumy text"
         }
+
+        setTimeout(() => {
+             this.state.txt = 'This is ne text and not work like this...'
+
+            },1000 )
+
+
     }
 
 
