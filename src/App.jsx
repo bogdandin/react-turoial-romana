@@ -5,8 +5,7 @@ class App extends Component {
         super(props)
 
         this.state = {
-            msg: "This is my first component"
-            txt: "This is my dumy text"
+            txt: "dumy text"
         }
     }
 
@@ -15,8 +14,9 @@ class App extends Component {
     render () {
         return (
             <div>
-                <h1>{this.state.msg}</h1>
-                <p>{this.state.txt}</p>
+                <h1>{this.state.txt}</h1>
+                <h1>{this.props.message}</h1>
+
 
 
             </div>
