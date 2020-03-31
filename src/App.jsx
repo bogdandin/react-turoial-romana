@@ -8,6 +8,12 @@ class App extends Component {
         this.state = {
             txt: "dumy text"
         }
+        this.styles = {
+
+            input:{
+                border:'1px solid red'
+            }
+        }
     }
 
         changeTxt (e) {
@@ -28,10 +34,10 @@ class App extends Component {
 
                 <h1>{this.state.txt}</h1>
 
-                <input type="text" onChange={(e)  => this.changeTxt(e)}/>
+                <input style={this.styles.input} type="text" onChange={(e)  => this.changeTxt(e)}/>
 
                <button onClick={() => this.changeTxt()}>
-                   Change text
+                  Add task
 
                </button>
 
